@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flightgearplanes.supersimplenotes"
+    android:versionCode="5"
+    android:versionName="2.1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.flightgearplanes.supersimplenotes.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+        android:name=".ActivityItemViewer"
+        android:label="@string/app_name" >
+	        <meta-data
+	            android:name="android.support.MAIN"
+	            android:value="com.flightgearplanes.supersimplenotes.MainActivity" />
+  		</activity>
+  		<provider
+  		    android:exported="true"
+	        android:name=".NotesDataSourceV2"
+	        android:authorities="com.flightgearplanes.supersimplenotes" >
+	    </provider>
+        <receiver 
+            android:enabled="@bool/widget_enabled"
+            android:icon="@drawable/ic_launcher"
+	        android:label="Simple Note Widget"
+	        android:name=".NoteWidget">
+            <intent-filter >
+	            <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+	        </intent-filter>
+            <meta-data
+         		android:name="android.appwidget.provider"
+          		android:resource="@xml/note_widget" />
+        </receiver>
+        <service android:name="ServiceNoteWidget"
+             android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+
+</manifest>

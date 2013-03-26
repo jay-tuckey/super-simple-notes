@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Simple Notes</string>
+    <string name="add_new">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="suggestComment">Enter Note Title</string>
+    <string name="nothingEntered">Nothing Entered</string>
+    <string name="noteSaved">Note Saved</string>
+    <string name="empty_note">Empty Note</string>
+    <string name="dialog_delete_confirmation">Do you really want to delete this note?</string>
+    <string name="menu_save">Save Note</string>
+    <string name="widget_title">Simple Notes</string>
+    <string name="no_such_note">No such note. Have you recently deleted it?</string>
+    <string name="editing_in_progress">Editing:</string>
+    <string name="press_save_to_close">Press save button to close note.</string>
+    <string name="click_note_to_open">Click a note, or enter a new title.</string>
+</resources>
